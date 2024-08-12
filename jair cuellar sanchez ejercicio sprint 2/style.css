@@ -1,0 +1,48 @@
+body {
+    background-image: url(./fondo-flex.jpg);
+
+    /*body general */
+
+    background-size: 100vw 100vh;
+    height: 87vh;
+}
+
+img {
+    height: 20vh;
+
+    */tamaño de los pajaracos*/
+}
+
+
+#pollosone {
+    display: flex;
+    align-items: end;
+    justify-content: space-evenly;
+
+    /*caja 1 */
+
+    height: 50%;
+}
+
+
+
+
+#pollostwo {
+    display: flex;
+    height: 26%;
+    justify-content: space-between;
+
+    /*caja 2 */
+
+}
+
+#pollosthree {
+
+    display: flex;
+    height: 26%;
+
+    /*caja 3 */
+
+    justify-content: center;
+
+}
