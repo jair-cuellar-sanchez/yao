@@ -1,0 +1,73 @@
+p {
+  color: hsla(245, 78%, 25%, 0.741);
+}
+label {
+  color: rgb(28, 216, 38);
+}
+input {
+  background-color: blue;
+}
+h2 {
+  color: brown;
+
+  font-weight: bold;
+  font-style: italic;
+}
+h5 {
+  color: blue;
+}
+.container-fluid img {
+  height: 2rem;
+}
+#buscador {
+  width: 8 rem;
+}
+.buscadorycheckboxs {
+  margin-top: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+.carousel-inner img {
+  height: 250px;
+}
+form {
+  color: rgb(161, 23, 23);
+}
+body > footer {
+  background-color: #8a0a16bd;
+  padding-top: 110px;
+  padding-bottom: 110px;
+  margin-top: 22rem;
+}
+footer {
+  background-color: #8a0a16bd;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  margin-top: 22rem;
+}
+
+.nav-link {
+  color: firebrick;
+}
+#containercontact textarea {
+  height: 100px;
+}
+
+.maindetails {
+  padding: 30vh;
+}
+
+#submitcontact {
+  right: 0;
+}
+.subtitle_table {
+  text-align: center;
+}
+#containerdetails img {
+  height: fit-content;
+  padding-top: 1rem;
+}
+table th,
+td {
+  border: solid black 1px;
+  height: 2rem;
+}
