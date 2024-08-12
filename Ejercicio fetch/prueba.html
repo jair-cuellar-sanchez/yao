@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #f8f9fa;
+        }
+
+        .maindetails {
+            margin: 20px;
+        }
+
+        .card {
+            margin: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card-body {
+            padding: 15px;
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer .container-fluid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        footer img {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="home.html"><img src="#" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.HTML">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="especies invasoras.html">especies invasoras</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="maindetails">
+            <div class="container m-5" id="containerdetails">
+                <div class="row" id="data">
+                    <!-- Las tarjetas se generarán aquí mediante JavaScript -->
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container-fluid d-flex justify-content-between">
+            <div class="row justify-content-start align-items-center px-2">
+                <div class="col-1 mx-3"><a href="https://web.whatsapp.com/"><img src="/whatsapp.png"
+                            alt="logo de whatsapp"></a>
+                </div>
+                <div class="col-1 mx-3"><a href="https://www.instagram.com/"><img src="/instagram.png"
+                            alt="logo de instagram"></a></div>
+                <div class="col-1 mx-3"><a href="https://www.facebook.com"><img src="/facebook.png"
+                            alt="logo de facebook"></a>
+                </div>
+            </div>
+            <span class="text-end align-middle">
+                COHORT
+            </span>
+        </div>
+    </footer>
+    <script>
+        let url = `https://api-colombia.com/api/v1/CategoryNaturalArea`; // URL de la API para obtener departamentos
+        let speciesData = []; // Variable para almacenar los datos de departamentos
+        // Imágenes para los departamentos
+        const departmentImages = {
+            // Define your department images here
+        };
+        // Función para obtener datos de la API
+        fetch(url)
+            .then((response) => response.json())
+            .then((data) => {
+                speciesData = data; // Guardar los datos en la variable
+                mostrarData(data); // Mostrar los datos en la tabla
+            })
+            .catch((error) => console.log("Error fetching data:", error));
+        // Función para mostrar los datos en tarjetas
+        const mostrarData = (data) => {
+            let body = "";
+            for (var i = 0; i < data.length; i++) {
+                let imageUrl = departmentImages[data[i].name] || data[i].urlImage; // Usa la imagen del mapa o la imagen por defecto
+                body += `<div class="col-md-4">
+                    <div class="card">
+                        <img src="${imageUrl}" class="card-img-top" alt="${data[i].name}">
+                        <div class="card-body">
+                            <h5 class="card-title">${data[i].name}</h5>
+                            <h5 class="card-title">${data[i].naturalAreas}</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">${data[i].description}</h6>
+                            <a href="details.html?id=${data[i].id}" class="btn btn-primary">details</a>
+                        </div>
+                    </div>
+                </div>`;
+            }
+            document.getElementById("data").innerHTML = body; // Actualiza el contenido del cuerpo de la tarjeta
+        };
+    </script>
+</body>
+
+</html>
