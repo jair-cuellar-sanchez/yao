@@ -1,0 +1,472 @@
+@keyframes show {
+  from {
+    opacity: 0.5;
+    transform: scale(0.6);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+body {
+  background-color: #343a40;
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+#logoHeader {
+  height: auto;
+  max-width: 100%;
+}
+
+.nav-link {
+  color: rgb(19, 2, 2) !important;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-link:hover {
+  color: rgb(150, 6, 6) !important;
+}
+
+.card-title {
+  font-weight: bold;
+  color: #2f0c68;
+}
+
+.card-text {
+  color: #340852;
+}
+
+.card {
+  background-color: #0a0a09;
+}
+
+.btn-primary {
+  background-color: #210544;
+  border: none;
+}
+/* Asegúrate de incluir este CSS en tu archivo de estilos o en una etiqueta <style> en tu HTML */
+
+/* Ajusta el contenedor de la imagen para que esté alineado a la izquierda */
+.col-10.col-sm-3 {
+  padding-left: 0; /* Elimina el padding izquierdo */
+  margin-left: 0; /* Elimina el margen izquierdo */
+  display: flex; /* Utiliza Flexbox para alinear el contenido */
+  align-items: center; /* Alinea verticalmente al centro */
+}
+
+/* Ajusta el estilo de la imagen para que esté alineada a la izquierda */
+.navbar-brand img {
+  display: block; /* Elimina el espacio debajo de la imagen */
+}
+
+@media screen and (max-width: 600px) {
+  main .carrusel {
+    height: auto;
+  }
+
+  main .carrusel img {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .card-link {
+    flex: 1 1 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    width: 100%;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 10px;
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .register-button a {
+    padding: 8px 16px;
+  }
+
+  .menu-toggle {
+    display: block;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+}
+
+body a {
+  color: #0a0a09;
+}
+
+body .barra {
+  animation: navbar linear both;
+  animation-timeline: scroll(root);
+  animation-range: 0 150px;
+}
+
+body .efecto-show {
+  view-timeline-name: --image;
+  view-timeline-axis: block;
+  animation-timeline: --image;
+  animation-name: show;
+  animation-range: entry 20% cover 40%;
+  animation-fill-mode: both;
+}
+
+.img-github {
+  width: 5vh;
+}
+
+#pergamino {
+  min-height: 20vh;
+}
+
+header {
+  background-color: #333;
+  color: #8f2c2c;
+  padding: 10px 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+.logo h1 {
+  margin: 0;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.register-button a {
+  color: #fff;
+  background-color: #007bff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+footer {
+  background-color: #343a40;
+  color: white;
+  padding: 0.5rem 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 1000;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+footer .footer-logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+footer .hstack {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+footer .hstack div a {
+  color: #fff;
+  background-color: #007bff;
+  border: 2px solid #007bff;
+  border-radius: 50%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, color 0.3s;
+  text-decoration: none;
+}
+
+footer .hstack div a:hover {
+  color: #fff;
+  background-color: #d41515;
+  border: 2px solid #d41515;
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 0.3rem 0.5rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer .hstack {
+    gap: 0.3rem;
+  }
+
+  footer .hstack div a {
+    font-size: 0.8rem;
+    padding: 0.4rem;
+  }
+}
+
+footer .footer-logo img {
+  width: 24px;
+  height: 24px;
+}
+/* CSS para la imagen en el footer */
+.footer-image-riot {
+  max-width: 60px; /* Tamaño máximo de la imagen, ajusta según sea necesario */
+  height: auto; /* Mantiene la proporción de la imagen */
+  display: block; /* Asegura que la imagen sea un bloque */
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+.col-10.col-sm-3 {
+  display: flex; /* Utiliza flexbox para alinear el contenido */
+  align-items: center; /* Centra verticalmente el contenido si es necesario */
+  padding: 0; /* Elimina el padding por defecto */
+  margin: 0; /* Elimina el margen por defecto */
+}
+
+.navbar-brand {
+  margin: 0; /* Elimina el margen por defecto de la marca de navegación */
+  padding: 0; /* Elimina el padding por defecto de la marca de navegación */
+  display: flex; /* Utiliza flexbox para el alineamiento interno */
+}
+
+.navbar-brand img {
+  margin-left: 0; /* Asegura que la imagen esté pegada al borde izquierdo del contenedor */
+}
+
+/* Contenedor del encabezado */
+header {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 10px;
+  background-color: #333;
+}
+
+/* Botón pequeño para abrir el menú */
+.menu-toggle {
+  background-color: #bd8484; /* Color por defecto cuando el menú está cerrado */
+  border: none;
+  color: white;
+  font-size: 24px; /* Tamaño del símbolo de mayor */
+  width: 40px; /* Tamaño del botón */
+  height: 40px; /* Tamaño del botón */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: fixed; /* Mantiene el botón fijo en la pantalla */
+  top: 10px; /* Ubica el botón en la parte superior */
+  left: 50%; /* Centra el botón horizontalmente */
+  transform: translateX(-50%); /* Ajusta la posición del botón */
+  z-index: 1000; /* Asegura que el botón esté encima del menú */
+  border-radius: 50%; /* Botón redondeado */
+  box-shadow: 0 0 5px rgba(23, 194, 17, 0.3); /* Sombra para hacer el botón más visible */
+}
+
+/* Cambia el color del botón cuando el menú está activo */
+.menu-total.active ~ .menu-toggle {
+  background-color: rgb(28, 187, 76); /* Rojo cuando el menú está abierto */
+}
+
+/* Contenedor del menú */
+.menu-total {
+  position: fixed;
+  left: 0;
+  top: 0;
+  text-col: #fff;
+  width: 220px; /* Ancho del menú */
+  height: 415px; /* Altura del menú igual a la altura del video */
+  background-color: #6c6081;
+  padding: 10px;
+  transform: translateX(-100%); /* Oculta el menú fuera de la pantalla */
+  transition: transform 0.3s ease;
+  overflow-y: auto; /* Permite el desplazamiento interno si el contenido excede la altura */
+  z-index: 999; /* Asegura que el menú esté sobre el contenido */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Mostrar el menú cuando está activo */
+.menu-total.active {
+  transform: translateX(0);
+}
+
+/* Estilo para el menú desplegable */
+.menu-desplegable {
+  flex: 1; /* Permite que el menú se expanda */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilo de los enlaces del menú */
+.menu-desplegable .nav-link {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  position: relative;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Estilo del icono en los enlaces del menú */
+.menu-desplegable .nav-link img {
+  margin-right: 10px;
+}
+
+/* Efecto hover para los enlaces del menú */
+.menu-desplegable .nav-link:hover {
+  background-color: #a3134d;
+  box-shadow: 0 4px 8px rgba(24, 138, 30, 0.3); /* Sombra para el efecto de elevación */
+}
+
+/* Efecto escalonado para el menú */
+.menu-desplegable .nav-link:nth-child(1) {
+  margin-top: 0; /* Primer ítem del menú */
+}
+.menu-desplegable .nav-link:nth-child(2) {
+  margin-top: 10px; /* Segundo ítem del menú */
+}
+.menu-desplegable .nav-link:nth-child(3) {
+  margin-top: 20px; /* Tercer ítem del menú */
+}
+.menu-desplegable .nav-link:nth-child(4) {
+  margin-top: 30px; /* Cuarto ítem del menú */
+}
+.menu-desplegable .nav-link:nth-child(5) {
+  margin-top: 40px; /* Quinto ítem del menú */
+}
+
+/* Contenedor del contenido (video) */
+.content {
+  margin-left: 0; /* Sin margen por defecto */
+  width: 100%; /* Ajusta el ancho para llenar el espacio */
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center;
+  position: relative;
+  transition: margin-left 0.3s ease; /* Transición suave para el margen cuando el menú se despliega */
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .menu-total {
+    width: 200px; /* Ajusta el ancho del menú en pantallas pequeñas */
+    height: 300px; /* Ajusta la altura del menú en pantallas pequeñas */
+  }
+
+  .content {
+    margin-left: 0; /* Sin margen en pantallas pequeñas */
+    width: 100%; /* Ajusta el ancho para llenar el espacio */
+  }
+}
+
+.menu-toggle {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Adjust size as needed */
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden; /* Ensures the image fits within the circular button */
+}
+
+.menu-icon {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+.modal-content {
+  background-color: #333;
+}
+p {
+  color: aliceblue;
+}
+h1 {
+  color: #fff;
+}
+.form-control {
+  background-color: rgb(100, 105, 119);
+}
+.form-select {
+  background-color: rgb(100, 105, 119);
+}
+
+/* CSS */
+.image-container {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 200px; /* Ajusta la altura del contenedor según sea necesario */
+}
+
+.centered-image {
+  max-width: 150px; /* Ajusta el ancho máximo según sea necesario */
+  max-height: 150px; /* Ajusta la altura máxima según sea necesario */
+  object-fit: cover; /* Mantiene la proporción y cubre el área del contenedor */
+}
+main {
+  padding: 40px;
+}
